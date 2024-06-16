@@ -34,7 +34,16 @@ pub struct RemoveLiquidity<'info> {
         bump,
     )]
     pub global_account: AccountInfo<'info>,
+    pub coin_mint: Account<'info, Mint>,
+    pub pool_account: Account<'info, TokenAccount>,
+    pub user_account: Account<'info, TokenAccount>,
+    pub user: Signer<'info>,
+    pub token_program: Program<'info, Token>,
+    pub associated_token_program: Program<'info, AssociatedToken>,
+    pub system_program: Program<'info, System>,
+    pub rent: Sysvar<'info, Rent>,
     
-    /// CHECK: Safe - CPI accounts
+    // CHECK: Safe - CPI accounts
     
 }
+

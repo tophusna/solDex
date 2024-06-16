@@ -30,24 +30,24 @@ pub mod pump {
         instructions::add_liquidity(ctx, amount_one, amount_two)
     }
 
-    pub fn remove_liquidity(
-        ctx: Context<RemoveLiquidity>,
-        nonce: u8,
-        init_pc_amount: u64,
-    ) -> Result<()> {
-        instructions::remove_liquidity(ctx, nonce, init_pc_amount)
-    }
+    // pub fn remove_liquidity(
+    //     ctx: Context<RemoveLiquidity>,
+    //     nonce: u8,
+    //     init_pc_amount: u64,
+    // ) -> Result<()> {
+    //     instructions::remove_liquidity(ctx, nonce, init_pc_amount)
+    // }
 
     pub fn swap(ctx: Context<Swap>, amount: u64, style: u64) -> Result<()> {
         instructions::swap(ctx, amount, style)
     }
 
-    pub fn create_raydium_pool(
-        ctx: Context<CreateRaydiumPool>,
-        nonce: u8,
-        init_pc_amount: u64,
-        init_coin_amount: u64,
-    ) -> Result<()> {
-        instructions::create_raydium_pool(ctx, nonce, init_pc_amount, init_coin_amount)
-    }
+    // pub fn create_raydium_pool(
+    //     ctx: Context<CreateRaydiumPool>,
+    //     nonce: u8,
+    //     init_pc_amount: u64,
+    //     init_coin_amount: u64,
+    // ) -> Result<()> {
+    //     instructions::create_raydium_pool(ctx, nonce, init_pc_amount, init_coin_amount)
+    // }
 }
